@@ -1,0 +1,13 @@
+{
+  "appId": "com.accenture.angularionicassessment",
+  "appName": "angular-ionic-assessment",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

@@ -1,0 +1,37 @@
+<ion-app>
+
+  <ion-menu side="start" menuId="m1">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Start Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item button routerLink="/members/dashboard">Dashboard</ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item button routerLink="/members/dummy1">Dummy Page1</ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item button routerLink="/members/dummy2">Dummy Page2</ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item button (click)="logout()">Lougout</ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-content></ion-content>
+  <ion-footer class="ion-no-border">
+    <ion-toolbar>
+      <ion-title>Footer</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+
+  <ion-router-outlet main></ion-router-outlet>
+  
+</ion-app>
