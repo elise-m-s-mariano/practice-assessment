@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from './services/authentication.service';
 
-import { Platform } from '@ionic/angular';
+import { Platform, IonMenu } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  @ViewChild("menu") menu:IonMenu;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -22,6 +23,7 @@ export class AppComponent {
     this.initializeApp();
   }
 
+
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
@@ -30,6 +32,7 @@ export class AppComponent {
       this.authenticationService.authenticationState.subscribe(state => {
         if (state) {
           this.router.navigate(['members', 'dashboard']);
+          this.menu.swipeGesture = true;
         } else {
           this.router.navigate(['login']);
         }
@@ -39,5 +42,6 @@ export class AppComponent {
 
   logout() {
     this.authenticationService.SignOut();
+    this.menu.swipeGesture = false;
   }
 }
