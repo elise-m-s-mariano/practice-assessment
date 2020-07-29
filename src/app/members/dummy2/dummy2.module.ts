@@ -17,4 +17,4 @@ import { Dummy2Page } from './dummy2.page';
   ],
   declarations: [Dummy2Page]
 })
-export class Dummy2PageModule {}
+export class Dummy2PageModule { }

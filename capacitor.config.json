@@ -1,5 +1,5 @@
 {
-  "appId": "com.accenture.angularionicassessment",
+  "appId": "com.sample.angularionicassessment",
   "appName": "angular-ionic-assessment",
   "bundledWebRuntime": false,
   "npmClient": "npm",

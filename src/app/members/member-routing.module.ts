@@ -9,11 +9,11 @@ const routes: Routes = [
   },
   {
     path: 'dummy1',
-    loadChildren: () => import('./dummy1/dummy1.module').then( m => m.Dummy1PageModule)
+    loadChildren: () => import('./dummy1/dummy1.module').then(m => m.Dummy1PageModule)
   },
   {
     path: 'dummy2',
-    loadChildren: () => import('./dummy2/dummy2.module').then( m => m.Dummy2PageModule)
+    loadChildren: () => import('./dummy2/dummy2.module').then(m => m.Dummy2PageModule)
   },
 ];
 
